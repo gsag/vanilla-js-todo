@@ -6,7 +6,7 @@ export class TodoListComponent
 	constructor()
 	{
 		this.API_URL = "https://jsonplaceholder.typicode.com/todos";
-		this.fetchTodos();
+		//this.fetchTodos();
 	}//func
 
 	getView()

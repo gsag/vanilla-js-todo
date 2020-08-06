@@ -2,4 +2,91 @@
 {
 	display: flex;
 	justify-content: center;
-}
+	flex-direction: column;
+	width: 50%;
+	margin: 0 auto;
+
+	.input-group
+	{
+		display: flex;
+		flex-direction: row;
+
+		.form-control
+		{
+			display: inline-block;
+			width: 100%;
+			padding: .375rem .75rem;
+			font-size: 1rem;
+			line-height: 1.5;
+			color: var(--md-indigo-400);
+			background-color: var(--md-white);
+			background-clip: padding-box;
+			border: 1px solid var(--md-blue-gray-100);
+			border-radius: .25rem;
+			transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	
+			&:focus,
+			&:active
+			{
+				outline: 0;
+				box-shadow: 0 0 0 0.2rem rgba(108,117,125,.3);
+			}
+		}//form-control
+		
+		.input-group-append 
+		{
+			width: 30%;
+			color: var(--md-black);
+			
+			& > .btn
+			{
+				display: inline-block;
+				font-weight: 400;
+				text-align: center;
+				white-space: nowrap;
+				vertical-align: middle;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				color: var(--md-indigo-400);
+				border: 1px solid var(--md-indigo-400);
+				background-color: transparent;
+				padding: .375rem .75rem;
+				font-size: 1rem;
+				line-height: 1.5;
+				border-radius: .25rem;
+				transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+				&.btn-outline:focus,
+				&.btn-outline:active
+				{
+					outline: 0;
+					box-shadow: 0 0 0 0.2rem rgba(108,117,125,.3);
+				}
+				&:hover
+				{
+					cursor: pointer;
+					background-color: var(--md-indigo-400);
+					color: var(--md-white);
+				}
+			}
+		}//input-group-append
+		
+		& > .form-control:first-child
+		{
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			border-right: none;
+		}
+
+		& > .input-group-append:not(first-child) > .btn,
+		& > .input-group-append:not(first-child) > .btn:focus
+		{
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+
+	}//input-group
+
+}//todo-list-container
