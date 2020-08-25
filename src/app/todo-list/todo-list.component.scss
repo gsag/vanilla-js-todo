@@ -35,7 +35,6 @@
 		
 		.input-group-append 
 		{
-			width: 30%;
 			color: var(--md-black);
 			
 			& > .btn
@@ -88,5 +87,52 @@
 		}
 
 	}//input-group
+
+	.todo-list
+	{
+		list-style: none;
+		padding: 0;
+
+		& > li
+		{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: .375rem .75rem;
+			border: 1px solid var(--md-blue-gray-100);
+			border-radius: .25rem;
+			margin: .5em 0;
+
+			& > span
+			{
+				width: 90%;
+				line-break: anywhere;
+				color: var(--md-indigo-400);
+			}
+			& > button
+			{
+				background: transparent;
+				border: 1px solid var(--md-indigo-400);
+				border-radius: .25em;
+				padding: .5em .8em;
+				font-weight: bold;
+				color: var(--md-indigo-400);
+
+				&:hover
+				{
+					color: var(--md-white);
+					background-color: var(--md-indigo-400);
+					cursor: pointer;
+				}
+				&:focus,
+				&:active
+				{
+					outline: 0;
+					box-shadow: 0 0 0 0.2rem rgba(108,117,125,.3);
+				}
+			}
+			
+		}
+	}//todo-list
 
 }//todo-list-container
